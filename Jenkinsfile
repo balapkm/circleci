@@ -1,10 +1,15 @@
 pipeline {
-    agent none
+    agent any
     stages {
-        stage('build') {
+        stage('Example') {
             steps {
-                sh 'php --version'
+                echo 'Hello World'
             }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
