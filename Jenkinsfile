@@ -19,7 +19,6 @@ try {
             echo "\u2600 BUILD_URL=${env.BUILD_URL}"
             def workspace = pwd()
             echo "\u2600 workspace=${workspace}"
-        stage '\u2777 Stage 2'
     } // node
 } // try end
 catch (exc) {
