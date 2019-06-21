@@ -1,6 +1,6 @@
 <?php
-echo "Connected successfully circleci run successfullddy  vvvv ff 111\n";
-exit;
+echo "Connected successfully circleci run successfullddy  vvvv ff 111 new change\n";
+// exit;
 $servername = "localhost";
 $username = "root";
 $password = "Bala@123";
