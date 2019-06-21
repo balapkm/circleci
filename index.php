@@ -1,5 +1,5 @@
 <?php
-echo "Vikaram  Santhosh Jegan ASASD New array_change_key_case sd snadasnd circleci run successfullddy  vvvv ff 111 new change\n";
+echo "successfully";
 // exit;
 $servername = "localhost";
 $username = "root";
