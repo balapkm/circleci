@@ -1,5 +1,5 @@
 <?php
-echo "New change...!!! Hello world Connected successfully circleci run successfullddy  vvvv ff 111 new change\n";
+echo "circleci run successfullddy  vvvv ff 111 new change\n";
 // exit;
 $servername = "localhost";
 $username = "root";
