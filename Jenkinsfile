@@ -14,7 +14,8 @@ node {
               def file = files[k]
               def dest_dir = "/var/www/html/circleci";
               sshagent(credentials : ['Balakumaran']) {
-                sh "scp $WORKSPACE/$file.path ubuntu@ec2-13-232-76-112.ap-south-1.compute.amazonaws.com:$dest_dir/$file.path"
+                  sh "php -v"
+                //sh "scp $WORKSPACE/$file.path ubuntu@ec2-13-232-76-112.ap-south-1.compute.amazonaws.com:$dest_dir/$file.path"
               }
             }
           }
