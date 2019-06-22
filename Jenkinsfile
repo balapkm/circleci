@@ -1,6 +1,6 @@
 node {
       stage("checkout") {
-        git url: 'https://github.com/jenkinsci/last-changes-plugin.git'
+        git url: 'https://github.com/balapkm/circleci.git'
       }
 
       stage("last-changes") {
