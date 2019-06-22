@@ -1,19 +1,31 @@
-<?php
-echo "successfully sybase_data_seek(result_identifier, row_number)  OI";
-// exit;
-$servername = "localhost";
-$username = "root";
-$password = "Bala@123";
-try {
-    $conn = new PDO("mysql:host=$servername", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully circleci run successfullddy  vvvv ff 111\n";
-}
-catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage() . "\n";
-    die(1);
-}
+def CMD
 
-?>
+node {
+    stage("checkout") {
+        git url: 'https://github.com/balapkm/circleci.git'
+    }
+
+    stage("last-changes") {
+        def changeLogSets = currentBuild.changeSets
+        for (int i = 0; i < changeLogSets.size(); i++) {
+            def entries = changeLogSets[i].items
+            for (int j = 0; j < entries.length; j++) {
+                def entry = entries[j]
+                def files = new ArrayList(entry.affectedFiles)
+                CMD = ""
+                for (int k = 0; k < files.size(); k++) {
+                    def file = files[k]
+                    def dest_dir = "/var/www/html/circleci";
+                    CMD = "$CMD && scp  -o StrictHostKeyChecking=no $WORKSPACE/$file.path ubuntu@ec2-13-232-76-112.ap-south-1.compute.amazonaws.com:$dest_dir/$file.path"
+                }
+          }
+        }
+    }
+
+    stage("check-changes") {
+        println "$CMD"
+        sshagent(credentials : ['Balakumaran']) {
+            sh "$CMD"
+        }
+    }
+}
