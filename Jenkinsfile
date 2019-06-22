@@ -12,7 +12,7 @@ node{
           script: "git rev-list $currentCommit \"^$lastSuccessfulCommit\"",
           returnStdout: true
         ).split('\n')
-        println "Commits are: $commits"
+        println "Commits are1: $commits"
       }
     }
   }
