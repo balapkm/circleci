@@ -30,11 +30,14 @@ node {
         timeout(time: 1, unit: 'HOURS') {
             input 'Deploy to Production?'
         }
-        // println "$CMD"
-        // if(CMD != ""){
-        //     sshagent(credentials : ['Balakumaran']) {
-        //         sh "$CMD"
-        //     }
-        // }
+    }
+
+    stage("Move to server") {
+        println "$CMD"
+        if(CMD != ""){
+            sshagent(credentials : ['Balakumaran']) {
+                sh "$CMD"
+            }
+        }
     }
 }
