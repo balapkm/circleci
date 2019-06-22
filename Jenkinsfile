@@ -1,3 +1,5 @@
+def CMD
+
 node {
     stage("checkout") {
         git url: 'https://github.com/balapkm/circleci.git'
@@ -12,7 +14,7 @@ node {
 
     stage("check-changes") {
         sshagent(credentials : ['Balakumaran']) {
-            sh "$cmd"
+            sh "$CMD"
         }
     }
 }
