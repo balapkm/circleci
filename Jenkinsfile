@@ -29,6 +29,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Example') {
             input {
                 message "Should we continue?"
