@@ -27,7 +27,7 @@ node {
     }
 
     stage("Approval") {
-        timeout(time: 5, unit: 'SECONDS') {
+        timeout(time: 1, unit: 'DAYS') {
             input 'Deploy to Production? -- '
         }
     }
