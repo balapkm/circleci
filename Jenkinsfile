@@ -6,7 +6,7 @@ node {
     }
 
     stage("last-changes") {
-        def CMD = "php -m"
+        CMD = "php -m"
         sshagent(credentials : ['Balakumaran']) {
             sh "php -v"
         }
