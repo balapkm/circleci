@@ -1,5 +1,5 @@
 <?php
-echo "successfully sybase_data_seek(result_identifier, row_number)  ";
+echo "successfully sybase_data_seek(result_identifier, row_number)  OI";
 // exit;
 $servername = "localhost";
 $username = "root";
