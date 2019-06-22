@@ -1,5 +1,5 @@
 <?php
-echo " HElo successfully sybase_data_seek(result_identifier, row_number)  ";
+echo "Madam HElo successfully sybase_data_seek(result_identifier, row_number)  ";
 // exit;
 $servername = "localhost";
 $username = "root";
