@@ -12,7 +12,10 @@ node {
             def files = new ArrayList(entry.affectedFiles)
             for (int k = 0; k < files.size(); k++) {
               def file = files[k]
-              println file.path
+              def dest_dir = "/var/www/html/circleci";
+              sshagent(credentials : ['Balakumaran']) {
+                sh "scp $WORKSPACE/{$file.path} ubuntu@http://ec2-13-232-76-112.ap-south-1.compute.amazonaws.com:${dest_dir}/{$file.path}"
+              }
             }
           }
         }
