@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages{
         stage("checkout") {
-            git url: 'https://github.com/balapkm/circleci.git'
+            steps{
+                git url: 'https://github.com/balapkm/circleci.git'
+            }
         }
         stages {
             stage('Example') {
