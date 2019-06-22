@@ -7,6 +7,7 @@ node{
       checkout scm
       def lastSuccessfulCommit = getLastSuccessfulCommit()
       def currentCommit = commitHashForBuild( currentBuild.rawBuild )
+      echo currentCommit
       if (lastSuccessfulCommit) {
         commits = sh(
           script: "git rev-list $currentCommit \"^$lastSuccessfulCommit\"",
