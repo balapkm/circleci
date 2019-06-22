@@ -1,5 +1,5 @@
 <?php
-echo "successfully  ->> ";
+echo "successfully   ";
 // exit;
 $servername = "localhost";
 $username = "root";
