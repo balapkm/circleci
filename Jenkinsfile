@@ -1,7 +1,7 @@
 // -*- mode: groovy -*-
 // vim: set filetype=groovy :
 
-node( 'some_node' ) {
+node{
   stage( "Phase 1" ) {
     sshagent( credentials: [ 'some_creds' ] ) {
       checkout scm
