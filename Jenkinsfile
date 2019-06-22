@@ -4,9 +4,15 @@ node {
     }
 
     stage("last-changes") {
+        def cmd = "php -m"
         sshagent(credentials : ['Balakumaran']) {
-                  sh "php -v"
-                //sh "scp $WORKSPACE/$file.path ubuntu@ec2-13-232-76-112.ap-south-1.compute.amazonaws.com:$dest_dir/$file.path"
+            sh "php -v"
+        }
+    }
+
+    stage("check-changes") {
+        sshagent(credentials : ['Balakumaran']) {
+            sh "$cmd"
         }
     }
 }
