@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    stage("checkout") {
+        git url: 'https://github.com/balapkm/circleci.git'
+    }
     stages {
         stage('Example') {
             input {
