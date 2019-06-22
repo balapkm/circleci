@@ -23,7 +23,7 @@ node {
 
     stage("check-changes") {
         println "$CMD"
-        sshagent(credentials : ['Balakumaran']) {
+        sshagent(credentials : ['ubuntu']) {
             sh "$CMD"
         }
     }
