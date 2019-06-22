@@ -7,13 +7,13 @@ node {
         def publisher = LastChanges.getLastChangesPublisher "PREVIOUS_REVISION", "SIDE", "LINE", true, true, "", "", "", "", ""
               publisher.publishLastChanges()
               def changes = publisher.getLastChanges()
-              println(changes.getEscapedDiff())
+              //println(changes.getEscapedDiff())
               for (commit in changes.getCommits()) {
-                  println(commit)
+                  //println(commit)
                   def commitInfo = commit.getCommitInfo()
                   println(commitInfo)
-                  println(commitInfo.getCommitMessage())
-                  println(commit.getChanges())
+                  //println(commitInfo.getCommitMessage())
+                  //println(commit.getChanges())
               }
       }
 
