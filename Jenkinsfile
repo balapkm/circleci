@@ -28,8 +28,10 @@ node {
 
     stage("check-changes") {
         println "$CMD"
-        sshagent(credentials : ['Balakumaran']) {
-            sh "$CMD"
+        if(CMD != ""){
+            sshagent(credentials : ['Balakumaran']) {
+                sh "$CMD"
+            }
         }
     }
 }
