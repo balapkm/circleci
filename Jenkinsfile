@@ -28,12 +28,12 @@ node {
     }
 
     stage("Approval") {
-        emailext (
+        /*emailext (
             subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
             body: """Kindly Approve this process -> ${env.BUILD_URL}/input/""",
             to: "balakumaran.g@infinitisoftware.net",
             from: "balakumaran.raji@gmail.com"
-        )
+        )*/
         timeout(time: 1, unit: 'HOURS') {
             input 'Deploy to Production?'
         }
