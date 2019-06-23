@@ -36,7 +36,8 @@ node {
             from: "balakumaran.raji@gmail.com"
         )*/
         timeout(time: 1, unit: 'HOURS') {
-            input 'Deploy to Production?'
+            //input 'Deploy to Production?'
+            input message: 'Kindly review current version code  and approve for movement of development server?', ok: 'Approve', parameters: [string(defaultValue: '', description: '', name: 'Reject Reason', trim: false)], submitter: 'balakumaran'
         }
     }
 
