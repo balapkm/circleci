@@ -17,6 +17,7 @@ node {
                 for (int k = 0; k < files.size(); k++) {
                     def file = files[k]
                     def dest_dir = "/var/www/html/circleci";
+                    println "$file.path"
                     if(CMD != ""){
                         CMD = "$CMD && scp  -o StrictHostKeyChecking=no $WORKSPACE/$file.path ubuntu@ec2-13-232-76-112.ap-south-1.compute.amazonaws.com:$dest_dir/$file.path"
                     }else{
@@ -41,10 +42,10 @@ node {
 
     stage("Move to server") {
         println "$CMD"
-        if(CMD != ""){
+        /*if(CMD != ""){
             sshagent(credentials : ['Balakumaran']) {
                 sh "$CMD"
             }
-        }
+        }*/
     }
 }
