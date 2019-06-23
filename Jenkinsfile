@@ -3,7 +3,7 @@ def CMD
 node {
     stage("checkout") {
         git url: 'https://github.com/balapkm/circleci.git'
-        flywayrunner commandLineArgs: '', credentialsId: '29094ff4-b5ea-47ad-8491-6fdcd0756608', flywayCommand: 'migrate', installationName: 'Flyway', locations: 'filesystem:$WORKSPACE/sql', url: 'jdbc:mysql://localhost:3306/test'
+        flywayrunner commandLineArgs: '', credentialsId: '29094ff4-b5ea-47ad-8491-6fdcd0756608', flywayCommand: 'migrate', installationName: 'Flyway', locations: "filesystem:$WORKSPACE/sql", url: 'jdbc:mysql://localhost:3306/test'
     }
 
     stage("last-changes") {
