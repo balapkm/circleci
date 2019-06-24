@@ -8,7 +8,7 @@ node {
     }
 
     stage("last-changes") {
-        def publisher = LastChanges.getLastChangesPublisher "PREVIOUS_REVISION", "SIDE", "LINE", true, true, "", "", "", "", ""
+        def publisher = LastChanges.getLastChangesPublisher "1cb3c0080764f9c3acfb7a425aea85a97ecbf95e", "SIDE", "LINE", true, true, "", "", "", "", ""
               publisher.publishLastChanges()
               def changes = publisher.getLastChanges()
               println(changes.getEscapedDiff())
