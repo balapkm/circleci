@@ -4,6 +4,7 @@ pipeline {
     stage('Clone') {
       steps {
         git 'https://github.com/balapkm/circleci.git'
+        echo 'Hello'
       }
     }
   }
