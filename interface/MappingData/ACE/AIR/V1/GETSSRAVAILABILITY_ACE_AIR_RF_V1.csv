@@ -1,0 +1,43 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,CREDENTIALS
+1,ACE,AIR,V1,RF,101,GetSSRAvailability,GetSSRAvailability,BookingService,GetSSRAvailabilityForBooking,3,Y,CURL,http://gcpstgace.airasia.com/BookingService.svc,"{""$id"": ""http://example.com/root.json"", ""type"": [""object"", ""array""], ""title"": ""The Root Schema"", ""$schema"": ""http://json-schema.org/draft-07/schema#"", ""definitions"": {}}","[
+    {
+        ""key"" : ""user_name"",
+        ""value"" : ""APIININFCO"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""password"",
+        ""value"" : ""Qhhe6LUB+BXV"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    }
+]"
+2,ACE,AIR,V1,RF,101,Sell,Sell,BookingService,Sell,2,Y,CURL,http://gcpstgace.airasia.com/BookingService.svc,"{""$id"": ""http://example.com/root.json"", ""type"": [""object"", ""array""], ""title"": ""The Root Schema"", ""$schema"": ""http://json-schema.org/draft-07/schema#"", ""definitions"": {}}","[
+    {
+        ""key"" : ""user_name"",
+        ""value"" : ""APIININFCO"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""password"",
+        ""value"" : ""Qhhe6LUB+BXV"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    }
+]"
+1,ACE,AIR,V1,RF,101,GetAvailability,GetAvailability,FareService,GetAvailability,1,Y,CURL,http://gcpstgace.airasia.com/FareService.svc,"{""$id"": ""http://example.com/root.json"", ""type"": [""object"", ""array""], ""title"": ""The Root Schema"", ""$schema"": ""http://json-schema.org/draft-07/schema#"", ""definitions"": {}}","[
+    {
+        ""key"" : ""user_name"",
+        ""value"" : ""APIININFCO"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""password"",
+        ""value"" : ""Qhhe6LUB+BXV"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    }
+]"

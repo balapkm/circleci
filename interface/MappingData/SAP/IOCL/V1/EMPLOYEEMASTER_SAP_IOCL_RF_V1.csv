@@ -1,0 +1,9 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SAP,IOCL,V1,RF,102,EmployeeMaster,,EmployeeMasterRQ,EmployeeMasterRQ,1,Y,CURL,http://sbistagingfe.agencyauto.net/ws/sync.php|http://123.108.56.123/AllWebServices2.0/IOCL/phpSSLCurl.php?url=https://b2b.ioclebiz.in:6900/RESTAdapter/SBT/EMPMSTACK&ca_file=/home/Staging/AllWebServices2.0/IOCL/Root.pem&certFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.com.crt&keyFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.key&username=b2buser&password=iocl1234,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema""
+}
+"

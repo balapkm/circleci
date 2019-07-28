@@ -1,0 +1,109 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,REDBUS,BUS,v1,RF,101,BookTicket,,,,1,Y,CURL,http://api.seatseller.travel/bookticket,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""updatedFare"",
+    ""previousFare"",
+    ""blockKey""
+  ],
+  ""properties"": {
+    ""updatedFare"": {
+      ""$id"": ""#/properties/updatedFare"",
+      ""type"": ""string"",
+      ""title"": ""The Updatedfare Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""90.00""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""blockKey"": {
+      ""$id"": ""#/properties/blockKey"",
+      ""type"": ""string"",
+      ""title"": ""The Blockkey Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Fkv2Izx4Rx""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}"
+2,REDBUS,BUS,v1,RF,101,CheckBookedTicket,,,,2,Y,CURL,http://api.seatseller.travel/checkBookedTicket,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""updatedFare"",
+    ""previousFare"",
+    ""blockKey""
+  ],
+  ""properties"": {
+    ""updatedFare"": {
+      ""$id"": ""#/properties/updatedFare"",
+      ""type"": ""string"",
+      ""title"": ""The Updatedfare Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""90.00""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""blockKey"": {
+      ""$id"": ""#/properties/blockKey"",
+      ""type"": ""string"",
+      ""title"": ""The Blockkey Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Fkv2Izx4Rx""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}"
+3,REDBUS,BUS,v1,RF,101,PrintTicket,,,,3,Y,CURL,http://api.seatseller.travel/ticket,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""updatedFare"",
+    ""previousFare"",
+    ""blockKey""
+  ],
+  ""properties"": {
+    ""updatedFare"": {
+      ""$id"": ""#/properties/updatedFare"",
+      ""type"": ""string"",
+      ""title"": ""The Updatedfare Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""90.00""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""blockKey"": {
+      ""$id"": ""#/properties/blockKey"",
+      ""type"": ""string"",
+      ""title"": ""The Blockkey Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Fkv2Izx4Rx""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}"

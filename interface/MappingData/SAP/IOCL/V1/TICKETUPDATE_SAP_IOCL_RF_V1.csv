@@ -1,0 +1,140 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SAP,IOCL,V1,RF,102,TicketUpdate,TicketUpdate,TicketUpdateRQ,TicketUpdateRQ,1,Y,NONE,123.108.56.123/AllWebServices2.0/IOCL/phpSSLCurl.php?url=https://b2b.ioclebiz.in:6900/RESTAdapter/SBT/TKTUPD&ca_file=/home/Staging/AllWebServices2.0/IOCL/Root.pem&certFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.com.crt&keyFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.key&username=b2buser&password=iocl1234,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""array"",
+  ""title"": ""The Root Schema"",
+  ""items"": {
+    ""$id"": ""#/items"",
+    ""type"": ""object"",
+    ""title"": ""The Items Schema"",
+    ""required"": [
+      ""employeeNumber"",
+      ""tripNumber"",
+      ""ticketRequestNumber"",
+      ""ticketAction"",
+      ""ticketStatus"",
+      ""remarks"",
+      ""refDate"",
+      ""orderId"",
+      ""amount""
+    ],
+    ""properties"": {
+      ""employeeNumber"": {
+        ""$id"": ""#/items/properties/employeeNumber"",
+        ""type"": ""string"",
+        ""title"": ""The Employeenumber Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""00081128""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""tripNumber"": {
+        ""$id"": ""#/items/properties/tripNumber"",
+        ""type"": ""string"",
+        ""title"": ""The Tripnumber Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""320""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""ticketRequestNumber"": {
+        ""$id"": ""#/items/properties/ticketRequestNumber"",
+        ""type"": ""string"",
+        ""title"": ""The Ticketrequestnumber Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""1644""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""ticketAction"": {
+        ""$id"": ""#/items/properties/ticketAction"",
+        ""type"": ""string"",
+        ""enum"": [
+          ""C"",
+          ""R"",
+          ""P"",
+          ""N""
+        ],
+        ""title"": ""The Ticketaction Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""C""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""ticketStatus"": {
+        ""$id"": ""#/items/properties/ticketStatus"",
+        ""type"": ""string"",
+        ""enum"": [
+          ""C"",
+          ""G"",
+          ""J"",
+          ""W"",
+          ""L"",
+          ""K"",
+          ""X"",
+          ""Y"",
+          ""A""
+        ],
+        ""title"": ""The Ticketstatus Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""C""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""remarks"": {
+        ""$id"": ""#/items/properties/remarks"",
+        ""type"": ""string"",
+        ""title"": ""The Remarks Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""Cancellation remark""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""refDate"": {
+        ""$id"": ""#/items/properties/refDate"",
+        ""type"": ""string"",
+        ""title"": ""The Refdate Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""2019-04-13""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""orderId"": {
+        ""$id"": ""#/items/properties/orderId"",
+        ""type"": ""string"",
+        ""title"": ""The Orderid Schema"",
+        ""default"": """",
+        ""examples"": [
+          ""7987987""
+        ],
+        ""minLength"": 1,
+        ""pattern"": ""^(.*)$""
+      },
+      ""amount"": {
+        ""$id"": ""#/items/properties/amount"",
+        ""type"": ""integer"",
+        ""title"": ""The Amount Schema"",
+        ""default"": 0,
+        ""examples"": [
+          1000
+        ]
+      }
+    }
+  }
+}"

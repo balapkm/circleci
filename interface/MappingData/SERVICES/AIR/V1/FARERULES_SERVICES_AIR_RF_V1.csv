@@ -1,0 +1,210 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SERVICES,AIR,V1,RF,101,FareRules,FareRules,FareRulesRQ,FareRulesRQ,1,Y,CURL,https://preprodaws.atyourprice.net/AllWebServices2.0/webSearch2.1/webServiceSearch.php,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""flightInfo"",
+    ""currency_type""
+  ],
+  ""properties"": {
+    ""flightInfo"": {
+      ""$id"": ""#/properties/flightInfo"",
+      ""type"": ""object"",
+      ""title"": ""The Flightinfo Schema"",
+      ""required"": [
+        ""Onward""
+      ],
+      ""properties"": {
+        ""Onward"": {
+          ""$id"": ""#/properties/flightInfo/properties/Onward"",
+          ""type"": ""array"",
+          ""title"": ""The Onward Schema"",
+          ""items"": {
+            ""$id"": ""#/properties/flightInfo/properties/Onward/items"",
+            ""type"": ""object"",
+            ""title"": ""The Items Schema"",
+            ""required"": [
+              ""cabin_class"",
+              ""airline_code"",
+              ""arrival_date"",
+              ""time_arrival"",
+              ""faretype_code"",
+              ""flight_number"",
+              ""departure_date"",
+              ""time_departure"",
+              ""fare_basic_code"",
+              ""dest_airport_code"",
+              ""origin_airport_code""
+            ],
+            ""properties"": {
+              ""cabin_class"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/cabin_class"",
+                ""type"": ""string"",
+                ""enum"": [
+                  ""E"",
+                  ""B"",
+                  ""P"",
+                  ""F""
+                ],
+                ""title"": ""The Cabin_class Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""E"",
+                  ""B"",
+                  ""P"",
+                  ""F""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""airline_code"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/airline_code"",
+                ""type"": ""string"",
+                ""title"": ""The Airline_code Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""WY""
+                ],
+                ""minLength"": 2,
+                ""pattern"": ""^(.*)$""
+              },
+              ""arrival_date"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/arrival_date"",
+                ""type"": ""string"",
+                ""title"": ""The Arrival_date Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""2019-12-03""
+                ],
+                ""format"": ""date"",
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""time_arrival"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/time_arrival"",
+                ""type"": ""string"",
+                ""title"": ""The Time_arrival Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""19:05""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""faretype_code"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/faretype_code"",
+                ""type"": ""string"",
+                ""enum"": [
+                  ""R"",
+                  ""NR"",
+                  ""RT""
+                ],
+                ""title"": ""The Faretype_code Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""R""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""flight_number"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/flight_number"",
+                ""type"": ""integer"",
+                ""title"": ""The Flight_number Schema"",
+                ""default"": 0,
+                ""examples"": [
+                  101
+                ],
+                ""minimum"": 1.0
+              },
+              ""departure_date"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/departure_date"",
+                ""type"": ""string"",
+                ""title"": ""The Departure_date Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""2019-12-03""
+                ],
+                ""format"": ""date"",
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""time_departure"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/time_departure"",
+                ""type"": ""string"",
+                ""title"": ""The Time_departure Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""14:00""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""fare_basic_code"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/fare_basic_code"",
+                ""type"": ""object"",
+                ""title"": ""The Fare_basic_code Schema"",
+                ""required"": [
+                  ""adult""
+                ],
+                ""properties"": {
+                  ""adult"": {
+                    ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/fare_basic_code/properties/adult"",
+                    ""type"": ""string"",
+                    ""title"": ""The Adult Schema"",
+                    ""default"": """",
+                    ""examples"": [
+                      ""LVEOWOM""
+                    ],
+                    ""minLength"": 1,
+                    ""pattern"": ""^(.*)$""
+                  }
+                }
+              },
+              ""dest_airport_code"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/dest_airport_code"",
+                ""type"": ""string"",
+                ""title"": ""The Dest_airport_code Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""LHR""
+                ],
+                ""minLength"": 3,
+                ""pattern"": ""^(.*)$""
+              },
+              ""origin_airport_code"": {
+                ""$id"": ""#/properties/flightInfo/properties/Onward/items/properties/origin_airport_code"",
+                ""type"": ""string"",
+                ""title"": ""The Origin_airport_code Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""MCT""
+                ],
+                ""minLength"": 3,
+                ""pattern"": ""^(.*)$""
+              }
+            }
+          }
+        }
+      }
+    },
+    ""currency_type"": {
+      ""$id"": ""#/properties/currency_type"",
+      ""type"": ""string"",
+      ""enum"": [
+        ""INR""
+      ],
+      ""title"": ""The Currency_type Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""INR""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}
+"

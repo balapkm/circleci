@@ -1,0 +1,664 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SAP,IOCL,V1,RF,102,Invoice,Invoice,InvoiceRQ,InvoiceRQ,1,Y,CURL,123.108.56.123/AllWebServices2.0/IOCL/phpSSLCurl.php?url=https://b2b.ioclebiz.in:6900/RESTAdapter/SBT/INVOICE&ca_file=/home/Staging/AllWebServices2.0/IOCL/Root.pem&certFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.com.crt&keyFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.key&username=b2buser&password=iocl1234,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""viaFlights"",
+    ""paxInfo"",
+    ""tripType"",
+    ""ticketStatus"",
+    ""orderId"",
+    ""tripNumber"",
+    ""remarks"",
+    ""requestedBy"",
+    ""batchId"",
+    ""batchFromDate"",
+    ""batchToDate"",
+    ""BLGSTNumber""
+  ],
+  ""properties"": {
+    ""viaFlights"": {
+      ""$id"": ""#/properties/viaFlights"",
+      ""type"": ""object"",
+      ""title"": ""The Viaflights Schema"",
+      ""required"": [
+        ""Onward""
+      ],
+      ""properties"": {
+        ""Onward"": {
+          ""$id"": ""#/properties/viaFlights/properties/Onward"",
+          ""type"": ""array"",
+          ""title"": ""The Onward Schema"",
+          ""items"": {
+            ""$id"": ""#/properties/viaFlights/properties/Onward/items"",
+            ""type"": ""object"",
+            ""title"": ""The Items Schema"",
+            ""required"": [
+              ""origin"",
+              ""destination"",
+              ""departureDate"",
+              ""arrivalDate"",
+              ""departureTime"",
+              ""arrivalTime"",
+              ""airlineCode"",
+              ""flightNumber"",
+              ""cabinClass"",
+              ""airlinePnr"",
+              ""gdsPnr"",
+              ""viaFlightId"",
+              ""flightId""
+            ],
+            ""properties"": {
+              ""origin"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/origin"",
+                ""type"": ""string"",
+                ""title"": ""The Origin Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""MAA""
+                ],
+                ""minLength"": 3,
+                ""maxLength"": 3,
+                ""pattern"": ""^(.*)$""
+              },
+              ""destination"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/destination"",
+                ""type"": ""string"",
+                ""title"": ""The Destination Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""DEL""
+                ],
+                ""minLength"": 3,
+                ""maxLength"": 3,
+                ""pattern"": ""^(.*)$""
+              },
+              ""departureDate"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/departureDate"",
+                ""type"": ""string"",
+                ""title"": ""The Departuredate Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""2019-05-06""
+                ],
+                ""format"": ""date"",
+                ""pattern"": ""^(.*)$""
+              },
+              ""arrivalDate"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/arrivalDate"",
+                ""type"": ""string"",
+                ""title"": ""The Arrivaldate Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""2019-05-07""
+                ],
+                ""format"": ""date"",
+                ""pattern"": ""^(.*)$""
+              },
+              ""departureTime"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/departureTime"",
+                ""type"": ""string"",
+                ""title"": ""The Departuretime Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""08:10""
+                ],
+                ""pattern"": """",
+                ""format"": ""time""
+              },
+              ""arrivalTime"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/arrivalTime"",
+                ""type"": ""string"",
+                ""title"": ""The Arrivaltime Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""10:15""
+                ],
+                ""pattern"": """",
+                ""format"": ""time""
+              },
+              ""airlineCode"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/airlineCode"",
+                ""type"": ""string"",
+                ""title"": ""The Airlinecode Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""SG""
+                ],
+                ""minLength"": 2,
+                ""pattern"": ""^(.*)$""
+              },
+              ""flightNumber"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/flightNumber"",
+                ""type"": ""string"",
+                ""title"": ""The Flightnumber Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""413""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""cabinClass"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/cabinClass"",
+                ""type"": ""string"",
+                ""title"": ""The Cabinclass Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""E""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              },
+              ""airlinePnr"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/airlinePnr"",
+                ""type"": ""string"",
+                ""title"": ""The Airlinepnr Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""OHDDAS""
+                ],
+                ""minLength"": 5,
+                ""maxLength"": 6,
+                ""pattern"": ""^(.*)$""
+              },
+              ""gdsPnr"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/gdsPnr"",
+                ""type"": ""string"",
+                ""title"": ""The Gdspnr Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""DKSNKJ""
+                ],
+                ""minLength"": 5,
+                ""maxLength"": 6,
+                ""pattern"": ""^(.*)$""
+              },
+              ""viaFlightId"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/viaFlightId"",
+                ""type"": [
+                  ""string"",
+                  ""integer""
+                ],
+                ""title"": ""The Viaflightid Schema"",
+                ""default"": 0,
+                ""examples"": [
+                  1
+                ],
+                ""minimum"": 1
+              },
+              ""flightId"": {
+                ""$id"": ""#/properties/viaFlights/properties/Onward/items/properties/flightId"",
+                ""type"": ""integer"",
+                ""title"": ""The Flightid Schema"",
+                ""default"": 0,
+                ""examples"": [
+                  1
+                ],
+                ""minimum"": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    ""paxInfo"": {
+      ""$id"": ""#/properties/paxInfo"",
+      ""type"": ""array"",
+      ""title"": ""The Paxinfo Schema"",
+      ""items"": {
+        ""$id"": ""#/properties/paxInfo/items"",
+        ""type"": ""object"",
+        ""title"": ""The Items Schema"",
+        ""required"": [
+          ""paxId"",
+          ""firstName"",
+          ""lastName"",
+          ""paxMail"",
+          ""age"",
+          ""gender"",
+          ""costCenter"",
+          ""mobileNumber"",
+          ""division"",
+          ""employeeNumber"",
+          ""location"",
+          ""companyCode"",
+          ""billInfo"",
+          ""fareInfo"",
+          ""emdFareInfo""
+        ],
+        ""properties"": {
+          ""paxId"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/paxId"",
+            ""type"": ""string"",
+            ""title"": ""The Paxid Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""1""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""firstName"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/firstName"",
+            ""type"": ""string"",
+            ""title"": ""The Firstname Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""bala""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""lastName"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/lastName"",
+            ""type"": ""string"",
+            ""title"": ""The Lastname Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""Kumaran""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""paxMail"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/paxMail"",
+            ""type"": ""string"",
+            ""title"": ""The Paxmail Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""balakumarana@infi.com""
+            ],
+            ""format"": ""email"",
+            ""pattern"": ""^(.*)$""
+          },
+          ""age"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/age"",
+            ""type"": [
+              ""string"",
+              ""integer""
+            ],
+            ""title"": ""The Age Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""29""
+            ],
+            ""minLength"": 1,
+            ""maxLength"": 3,
+            ""pattern"": ""^(.*)$""
+          },
+          ""gender"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/gender"",
+            ""type"": ""string"",
+            ""enum"": [
+              ""Male"",
+              ""Female""
+            ],
+            ""title"": ""The Gender Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""Male""
+            ],
+            ""pattern"": ""^(.*)$""
+          },
+          ""costCenter"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/costCenter"",
+            ""type"": ""string"",
+            ""title"": ""The Costcenter Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""13000""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""mobileNumber"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/mobileNumber"",
+            ""type"": ""string"",
+            ""title"": ""The Mobilenumber Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""9442086423""
+            ],
+            ""minLength"": 10,
+            ""maxLength"": 10,
+            ""pattern"": ""^(.*)$""
+          },
+          ""division"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/division"",
+            ""type"": ""string"",
+            ""title"": ""The Division Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""IT""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""employeeNumber"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/employeeNumber"",
+            ""type"": ""string"",
+            ""title"": ""The Employeenumber Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""8969869""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""location"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/location"",
+            ""type"": ""string"",
+            ""title"": ""The Location Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""IN""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""companyCode"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/companyCode"",
+            ""type"": ""string"",
+            ""title"": ""The Companycode Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""90879""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""billInfo"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/billInfo"",
+            ""type"": ""array"",
+            ""title"": ""The Billinfo Schema"",
+            ""items"": {
+              ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items"",
+              ""type"": ""object"",
+              ""title"": ""The Items Schema"",
+              ""required"": [
+                ""flightId"",
+                ""type"",
+                ""bill_no"",
+                ""bill_date"",
+                ""o_bill_no"",
+                ""o_bill_date""
+              ],
+              ""properties"": {
+                ""flightId"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items/properties/flightId"",
+                  ""type"": ""integer"",
+                  ""title"": ""The Flightid Schema"",
+                  ""default"": 0,
+                  ""examples"": [
+                    1
+                  ],
+                  ""minimum"": 1
+                },
+                ""type"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items/properties/type"",
+                  ""type"": ""string"",
+                  ""enum"": [
+                    ""INV"",
+                    ""EMDINV"",
+                    ""CRD"",
+                    ""EMDCRD""
+                  ],
+                  ""title"": ""The Type Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""INV""
+                  ],
+                  ""minLength"": 0,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""bill_no"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items/properties/bill_no"",
+                  ""type"": ""string"",
+                  ""title"": ""The Bill_no Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""INV8798798798""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""bill_date"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items/properties/bill_date"",
+                  ""type"": ""string"",
+                  ""title"": ""The Bill_date Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""2019-04-04""
+                  ],
+                  ""format"": """",
+                  ""pattern"": ""^(.*)$""
+                },
+                ""o_bill_no"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items/properties/o_bill_no"",
+                  ""type"": ""string"",
+                  ""title"": ""The O_bill_no Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""INV86786898""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""o_bill_date"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/billInfo/items/properties/o_bill_date"",
+                  ""type"": ""string"",
+                  ""title"": ""The O_bill_date Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""2019-03-28""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                }
+              }
+            }
+          },
+          ""fareInfo"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/fareInfo"",
+            ""type"": ""array"",
+            ""title"": ""The Fareinfo Schema"",
+            ""items"": {
+              ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items"",
+              ""type"": ""object"",
+              ""title"": ""The Items Schema"",
+              ""required"": [
+                ""baseFare"",
+                ""totalTax"",
+                ""tax"",
+                ""gstTaxBase"",
+                ""ticketNumber"",
+                ""flightId""
+              ],
+              ""properties"": {
+                ""baseFare"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items/properties/baseFare"",
+                  ""type"": ""string"",
+                  ""title"": ""The Basefare Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""2000""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""totalTax"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items/properties/totalTax"",
+                  ""type"": ""string"",
+                  ""title"": ""The Totaltax Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""1600""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""tax"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items/properties/tax"",
+                  ""type"": ""object"",
+                  ""title"": ""The Tax Schema""
+                },
+                ""gstTaxBase"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items/properties/gstTaxBase"",
+                  ""type"": ""string"",
+                  ""title"": ""The Gsttaxbase Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""100""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""ticketNumber"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items/properties/ticketNumber"",
+                  ""type"": ""string"",
+                  ""title"": ""The Ticketnumber Schema"",
+                  ""default"": """",
+                  ""examples"": [
+                    ""6456548""
+                  ],
+                  ""minLength"": 1,
+                  ""pattern"": ""^(.*)$""
+                },
+                ""flightId"": {
+                  ""$id"": ""#/properties/paxInfo/items/properties/fareInfo/items/properties/flightId"",
+                  ""type"": ""integer"",
+                  ""title"": ""The Flightid Schema"",
+                  ""default"": 0,
+                  ""examples"": [
+                    1
+                  ],
+                  ""minimum"": 1
+                }
+              }
+            }
+          },
+          ""emdFareInfo"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/emdFareInfo"",
+            ""type"": ""array"",
+            ""title"": ""The Emdfareinfo Schema""
+          }
+        }
+      }
+    },
+    ""tripType"": {
+      ""$id"": ""#/properties/tripType"",
+      ""type"": ""string"",
+      ""title"": ""The Triptype Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""O""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""ticketStatus"": {
+      ""$id"": ""#/properties/ticketStatus"",
+      ""type"": ""string"",
+      ""title"": ""The Ticketstatus Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""B""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""orderId"": {
+      ""$id"": ""#/properties/orderId"",
+      ""type"": ""string"",
+      ""title"": ""The Orderid Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""7987987""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""tripNumber"": {
+      ""$id"": ""#/properties/tripNumber"",
+      ""type"": ""string"",
+      ""title"": ""The Tripnumber Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""6546456""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""remarks"": {
+      ""$id"": ""#/properties/remarks"",
+      ""type"": ""string"",
+      ""title"": ""The Remarks Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Approved""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""requestedBy"": {
+      ""$id"": ""#/properties/requestedBy"",
+      ""type"": ""string"",
+      ""title"": ""The Requestedby Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""callcenterteam@gmail.com""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""batchId"": {
+      ""$id"": ""#/properties/batchId"",
+      ""type"": ""string"",
+      ""title"": ""The Batchid Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""238""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""batchFromDate"": {
+      ""$id"": ""#/properties/batchFromDate"",
+      ""type"": ""string"",
+      ""title"": ""The Batchfromdate Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""2019-03-05""
+      ],
+      ""format"": ""date"",
+      ""pattern"": ""^(.*)$""
+    },
+    ""batchToDate"": {
+      ""$id"": ""#/properties/batchToDate"",
+      ""type"": ""string"",
+      ""title"": ""The Batchtodate Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""2019-03-05""
+      ],
+      ""format"": ""date"",
+      ""pattern"": ""^(.*)$""
+    },
+    ""BLGSTNumber"": {
+      ""$id"": ""#/properties/BLGSTNumber"",
+      ""type"": ""string"",
+      ""title"": ""The Blgstnumber Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""98ABCB009098ZX""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}
+"

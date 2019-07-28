@@ -1,0 +1,699 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SERVICES,AIR,V1,RF,101,FlightBooking,,FlightBookingRQ,FlightBookingRQ,1,Y,NUSOAP,http://preprodaws.atyourprice.net/AllWebServices2.0/navitaireWebServices2.0/flightWebServices/services/serviceWrapper.php|http://preprodaws.atyourprice.net/AllWebServices2.0/sabreWebServices2.0/flightWebServices/services/serviceWrapper.php|http://sapsbttestadmin.agencyauto.net/services/serviceWrapper.php,"{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "currency_type",
+    "flightInfo",
+    "paxInfo"
+  ],
+  "properties": {
+    "currency_type": {
+      "$id": "#/properties/currency_type",
+      "type": "string",
+      "enum": [
+        "INR"
+      ],
+      "title": "The Currency_type Schema",
+      "default": "",
+      "examples": [
+        "INR"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "flightInfo": {
+      "$id": "#/properties/flightInfo",
+      "type": "object",
+      "title": "The Flightinfo Schema",
+      "required": [
+        "Onward",
+        "Return"
+      ],
+      "properties": {
+        "Onward": {
+          "$id": "#/properties/flightInfo/properties/Onward",
+          "type": "array",
+          "title": "The Onward Schema",
+          "items": {
+            "$id": "#/properties/flightInfo/properties/Onward/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "origin_airport_code",
+              "dest_airport_code",
+              "time_departure",
+              "time_arrival",
+              "arrival_date",
+              "departure_date",
+              "cabin_class",
+              "flight_number",
+              "faretype_code",
+              "airline_code",
+              "fare_basic_code"
+            ],
+            "properties": {
+              "origin_airport_code": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/origin_airport_code",
+                "type": "string",
+                "title": "The Origin_airport_code Schema",
+                "default": "",
+                "examples": [
+                  "BOM"
+                ],
+                "minLength": 3,
+                "maxLength": 3,
+                "pattern": "^(.*)$"
+              },
+              "dest_airport_code": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/dest_airport_code",
+                "type": "string",
+                "title": "The Dest_airport_code Schema",
+                "default": "",
+                "examples": [
+                  "DEL"
+                ],
+                "minLength": 3,
+                "maxLength": 3,
+                "pattern": "^(.*)$"
+              },
+              "time_departure": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/time_departure",
+                "type": "string",
+                "title": "The Time_departure Schema",
+                "default": "",
+                "examples": [
+                  "11:00"
+                ],
+                "pattern": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+              },
+              "time_arrival": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/time_arrival",
+                "type": "string",
+                "title": "The Time_arrival Schema",
+                "default": "",
+                "examples": [
+                  "13:20"
+                ],
+                "pattern": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+              },
+              "arrival_date": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/arrival_date",
+                "type": "string",
+                "title": "The Arrival_date Schema",
+                "default": "",
+                "examples": [
+                  "2019-09-16"
+                ],
+                "format": "date",
+                "pattern": "^(.*)$"
+              },
+              "departure_date": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/departure_date",
+                "type": "string",
+                "title": "The Departure_date Schema",
+                "default": "",
+                "examples": [
+                  "2019-09-16"
+                ],
+                "format": "date",
+                "pattern": "^(.*)$"
+              },
+              "cabin_class": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/cabin_class",
+                "type": "string",
+                "enum": [
+                  "E",
+                  "B",
+                  "P",
+                  "F"
+                ],
+                "title": "The Cabin_class Schema",
+                "default": "",
+                "examples": [
+                  "E"
+                ],
+                "minLength": 1,
+                "pattern": "^(.*)$"
+              },
+              "flight_number": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/flight_number",
+                "type": "integer",
+                "title": "The Flight_number Schema",
+                "default": 0,
+                "examples": [
+                  307
+                ],
+                "minimum": 1
+              },
+              "faretype_code": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/faretype_code",
+                "type": "string",
+                "enum": [
+                  "R",
+                  "NR"
+                ],
+                "title": "The Faretype_code Schema",
+                "default": "",
+                "examples": [
+                  "R"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "airline_code": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/airline_code",
+                "type": "string",
+                "title": "The Airline_code Schema",
+                "default": "",
+                "examples": [
+                  "9W"
+                ],
+                "minLength": 2,
+                "pattern": "^(.*)$"
+              },
+              "fare_basic_code": {
+                "$id": "#/properties/flightInfo/properties/Onward/items/properties/fare_basic_code",
+                "type": "object",
+                "title": "The Fare_basic_code Schema",
+                "required": [
+                  "adult",
+                  "child",
+                  "infant"
+                ],
+                "properties": {
+                  "adult": {
+                    "$id": "#/properties/flightInfo/properties/Onward/items/properties/fare_basic_code/properties/adult",
+                    "type": "string",
+                    "title": "The Adult Schema",
+                    "default": "",
+                    "examples": [
+                      "B2IPO"
+                    ],
+                    "minLength": 1,
+                    "pattern": "^(.*)$"
+                  },
+                  "child": {
+                    "$id": "#/properties/flightInfo/properties/Onward/items/properties/fare_basic_code/properties/child",
+                    "type": "string",
+                    "title": "The Child Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "infant": {
+                    "$id": "#/properties/flightInfo/properties/Onward/items/properties/fare_basic_code/properties/infant",
+                    "type": "string",
+                    "title": "The Infant Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Return": {
+          "$id": "#/properties/flightInfo/properties/Return",
+          "type": "array",
+          "title": "The Return Schema",
+          "items": {
+            "$id": "#/properties/flightInfo/properties/Return/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "origin_airport_code",
+              "dest_airport_code",
+              "time_departure",
+              "time_arrival",
+              "arrival_date",
+              "departure_date",
+              "cabin_class",
+              "flight_number",
+              "faretype_code",
+              "airline_code",
+              "fare_basic_code"
+            ],
+            "properties": {
+              "origin_airport_code": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/origin_airport_code",
+                "type": "string",
+                "title": "The Origin_airport_code Schema",
+                "default": "",
+                "examples": [
+                  "DEL"
+                ],
+                "minLength": 3,
+                "maxLength": 3,
+                "pattern": "^(.*)$"
+              },
+              "dest_airport_code": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/dest_airport_code",
+                "type": "string",
+                "title": "The Dest_airport_code Schema",
+                "default": "",
+                "examples": [
+                  "BOM"
+                ],
+                "minLength": 3,
+                "maxLength": 3,
+                "pattern": "^(.*)$"
+              },
+              "time_departure": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/time_departure",
+                "type": "string",
+                "title": "The Time_departure Schema",
+                "default": "",
+                "examples": [
+                  "02:15"
+                ],
+                "pattern": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+              },
+              "time_arrival": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/time_arrival",
+                "type": "string",
+                "title": "The Time_arrival Schema",
+                "default": "",
+                "examples": [
+                  "04:30"
+                ],
+                "pattern": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+              },
+              "arrival_date": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/arrival_date",
+                "type": "string",
+                "title": "The Arrival_date Schema",
+                "default": "",
+                "examples": [
+                  "2019-09-19"
+                ],
+                "format": "date",
+                "pattern": "^(.*)$"
+              },
+              "departure_date": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/departure_date",
+                "type": "string",
+                "title": "The Departure_date Schema",
+                "default": "",
+                "examples": [
+                  "2019-09-19"
+                ],
+                "format": "date",
+                "pattern": "^(.*)$"
+              },
+              "cabin_class": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/cabin_class",
+                "type": "string",
+                "enum": [
+                  "E",
+                  "B",
+                  "P",
+                  "F"
+                ],
+                "title": "The Cabin_class Schema",
+                "default": "",
+                "examples": [
+                  "E"
+                ],
+                "minLength": 1,
+                "pattern": "^(.*)$"
+              },
+              "flight_number": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/flight_number",
+                "type": "integer",
+                "title": "The Flight_number Schema",
+                "default": 0,
+                "examples": [
+                  313
+                ],
+                "minimum": 1.0
+              },
+              "faretype_code": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/faretype_code",
+                "type": "string",
+                "enum": [
+                  "R",
+                  "NR"
+                ],
+                "title": "The Faretype_code Schema",
+                "default": "",
+                "examples": [
+                  "R"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "airline_code": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/airline_code",
+                "type": "string",
+                "title": "The Airline_code Schema",
+                "default": "",
+                "examples": [
+                  "9W"
+                ],
+                "minLength": 2,
+                "pattern": "^(.*)$"
+              },
+              "fare_basic_code": {
+                "$id": "#/properties/flightInfo/properties/Return/items/properties/fare_basic_code",
+                "type": "object",
+                "title": "The Fare_basic_code Schema",
+                "required": [
+                  "adult",
+                  "child",
+                  "infant"
+                ],
+                "properties": {
+                  "adult": {
+                    "$id": "#/properties/flightInfo/properties/Return/items/properties/fare_basic_code/properties/adult",
+                    "type": "string",
+                    "title": "The Adult Schema",
+                    "default": "",
+                    "examples": [
+                      "B2IPO"
+                    ],
+                    "minLength": 1,
+                    "pattern": "^(.*)$"
+                  },
+                  "child": {
+                    "$id": "#/properties/flightInfo/properties/Return/items/properties/fare_basic_code/properties/child",
+                    "type": "string",
+                    "title": "The Child Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "infant": {
+                    "$id": "#/properties/flightInfo/properties/Return/items/properties/fare_basic_code/properties/infant",
+                    "type": "string",
+                    "title": "The Infant Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "paxInfo": {
+      "$id": "#/properties/paxInfo",
+      "type": "array",
+      "title": "The Paxinfo Schema",
+      "items": {
+        "$id": "#/properties/paxInfo/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "pax_ref_id",
+          "first_name",
+          "last_name",
+          "pax_type",
+          "title",
+          "email",
+          "phone_number",
+          "DOB",
+          "gender",
+          "fare_info"
+        ],
+        "properties": {
+          "pax_ref_id": {
+            "$id": "#/properties/paxInfo/items/properties/pax_ref_id",
+            "type": "integer",
+            "title": "The Pax_ref_id Schema",
+            "default": 0,
+            "examples": [
+              1
+            ],
+            "minimum": 1
+          },
+          "first_name": {
+            "$id": "#/properties/paxInfo/items/properties/first_name",
+            "type": "string",
+            "title": "The First_name Schema",
+            "default": "",
+            "examples": [
+              "BALA"
+            ],
+            "minLength": 3,
+            "pattern": "^(.*)$"
+          },
+          "last_name": {
+            "$id": "#/properties/paxInfo/items/properties/last_name",
+            "type": "string",
+            "title": "The Last_name Schema",
+            "default": "",
+            "examples": [
+              "KUMARAN"
+            ],
+            "minLength": 3,
+            "pattern": "^(.*)$"
+          },
+          "pax_type": {
+            "$id": "#/properties/paxInfo/items/properties/pax_type",
+            "type": "string",
+            "enum": [
+              "ADT",
+              "CNN",
+              "INF"
+            ],
+            "title": "The Pax_type Schema",
+            "default": "",
+            "examples": [
+              "ADT"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "title": {
+            "$id": "#/properties/paxInfo/items/properties/title",
+            "type": "string",
+            "enum": [
+              "MR",
+              "MRS",
+              "MS"
+            ],
+            "title": "The Title Schema",
+            "default": "",
+            "examples": [
+              "MR"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "email": {
+            "$id": "#/properties/paxInfo/items/properties/email",
+            "type": "string",
+            "title": "The Email Schema",
+            "default": "",
+            "examples": [
+              "balakumaran.raji@gmail.com"
+            ],
+            "format": "email",
+            "pattern": "^(.*)$"
+          },
+          "phone_number": {
+            "$id": "#/properties/paxInfo/items/properties/phone_number",
+            "type": "string",
+            "title": "The Phone_number Schema",
+            "default": "",
+            "examples": [
+              "917845351015"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "DOB": {
+            "$id": "#/properties/paxInfo/items/properties/DOB",
+            "type": "string",
+            "title": "The Dob Schema",
+            "default": "",
+            "examples": [
+              "2000-09-01"
+            ],
+            "format": "date",
+            "pattern": "^(.*)$"
+          },
+          "gender": {
+            "$id": "#/properties/paxInfo/items/properties/gender",
+            "type": "string",
+            "enum": [
+              "Male",
+              "Female"
+            ],
+            "title": "The Gender Schema",
+            "default": "",
+            "examples": [
+              "Male"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "parent_adult_id": {
+            "$id": "#/properties/paxInfo/items/properties/parent_adult_id",
+            "type": "integer",
+            "title": "The Parent_adult_id Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "frequent_flyer_details": {
+            "$id": "#/properties/paxInfo/items/properties/frequent_flyer_details",
+            "type": "array",
+            "title": "The Frequent_flyer_details Schema",
+            "items": {
+              "$id": "#/properties/paxInfo/items/properties/frequent_flyer_details/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "frequent_flyer_number",
+                "airline_code"
+              ],
+              "properties": {
+                "frequent_flyer_number": {
+                  "$id": "#/properties/paxInfo/items/properties/frequent_flyer_details/items/properties/frequent_flyer_number",
+                  "type": "integer",
+                  "title": "The Frequent_flyer_number Schema",
+                  "default": 0,
+                  "examples": [
+                    5477234
+                  ]
+                },
+                "airline_code": {
+                  "$id": "#/properties/paxInfo/items/properties/frequent_flyer_details/items/properties/airline_code",
+                  "type": "string",
+                  "title": "The Airline_code Schema",
+                  "default": "",
+                  "examples": [
+                    "WY"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "id_proof_details": {
+            "$id": "#/properties/paxInfo/items/properties/id_proof_details",
+            "type": "array",
+            "title": "The Id_proof_details Schema",
+            "items": {
+              "$id": "#/properties/paxInfo/items/properties/id_proof_details/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "nationalityCountryCode",
+                "issuedCountryCode",
+                "passport_issuedate",
+                "expirydate",
+                "number",
+                "type"
+              ],
+              "properties": {
+                "nationalityCountryCode": {
+                  "$id": "#/properties/paxInfo/items/properties/id_proof_details/items/properties/nationalityCountryCode",
+                  "type": "string",
+                  "title": "The Nationalitycountrycode Schema",
+                  "default": "",
+                  "examples": [
+                    "IN"
+                  ],
+                  "minLength": 2,
+                  "pattern": "^(.*)$"
+                },
+                "issuedCountryCode": {
+                  "$id": "#/properties/paxInfo/items/properties/id_proof_details/items/properties/issuedCountryCode",
+                  "type": "string",
+                  "title": "The Issuedcountrycode Schema",
+                  "default": "",
+                  "examples": [
+                    "India"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "passport_issuedate": {
+                  "$id": "#/properties/paxInfo/items/properties/id_proof_details/items/properties/passport_issuedate",
+                  "type": "string",
+                  "title": "The Passport_issuedate Schema",
+                  "default": "",
+                  "examples": [
+                    "2018-12-03"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "expirydate": {
+                  "$id": "#/properties/paxInfo/items/properties/id_proof_details/items/properties/expirydate",
+                  "type": "string",
+                  "title": "The Expirydate Schema",
+                  "default": "",
+                  "examples": [
+                    "2023-12-09"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "number": {
+                  "$id": "#/properties/paxInfo/items/properties/id_proof_details/items/properties/number",
+                  "type": "integer",
+                  "title": "The Number Schema",
+                  "default": 0,
+                  "examples": [
+                    98760
+                  ]
+                },
+                "type": {
+                  "$id": "#/properties/paxInfo/items/properties/id_proof_details/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "passport"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "fare_info": {
+            "$id": "#/properties/paxInfo/items/properties/fare_info",
+            "type": "object",
+            "title": "The Fare_info Schema",
+            "required": [
+              "base_fare",
+              "total_fare"
+            ],
+            "properties": {
+              "base_fare": {
+                "$id": "#/properties/paxInfo/items/properties/fare_info/properties/base_fare",
+                "type": "integer",
+                "title": "The Base_fare Schema",
+                "default": 0,
+                "examples": [
+                  3004
+                ],
+                "minimum": 1
+              },
+              "total_fare": {
+                "$id": "#/properties/paxInfo/items/properties/fare_info/properties/total_fare",
+                "type": "integer",
+                "title": "The Total_fare Schema",
+                "default": 0,
+                "examples": [
+                  3154
+                ],
+                "minimum": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+"

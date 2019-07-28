@@ -1,0 +1,173 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,CREDENTIALS
+1,NDC,AIR,V2T,RF,102,FareRules,FareRules,FareRulesRQ,FareRulesRQ,1,Y,CURL,https://preprodaws.atyourprice.net/AllWebServices2.0/webSearch2.1/webServiceSearch.php,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""types"",
+    ""flight""
+  ],
+  ""properties"": {
+    ""types"": {
+      ""$id"": ""#/properties/types"",
+      ""type"": ""object"",
+      ""title"": ""The Types Schema"",
+      ""required"": [
+        ""airlinecode""
+      ],
+      ""properties"": {
+        ""airlinecode"": {
+          ""$id"": ""#/properties/types/properties/airlinecode"",
+          ""type"": ""string"",
+          ""title"": ""The Airlinecode Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""2T""
+          ],
+          ""minLength"": 2,
+          ""pattern"": ""^(.*)$""
+        }
+      }
+    },
+    ""flight"": {
+      ""$id"": ""#/properties/flight"",
+      ""type"": ""object"",
+      ""title"": ""The Flight Schema"",
+      ""required"": [
+        ""via_flights""
+      ],
+      ""properties"": {
+        ""via_flights"": {
+          ""$id"": ""#/properties/flight/properties/via_flights"",
+          ""type"": ""array"",
+          ""title"": ""The Via_flights Schema"",
+          ""items"": {
+            ""$id"": ""#/properties/flight/properties/via_flights/items"",
+            ""type"": ""object"",
+            ""title"": ""The Items Schema"",
+            ""required"": [
+              ""origin"",
+              ""destination"",
+              ""date_depature"",
+              ""fare_basic_code"",
+              ""airline_code""
+            ],
+            ""properties"": {
+              ""origin"": {
+                ""$id"": ""#/properties/flight/properties/via_flights/items/properties/origin"",
+                ""type"": ""string"",
+                ""title"": ""The Origin Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""HYD""
+                ],
+                ""minLength"": 3,
+                ""maxLength"": 3,
+                ""pattern"": ""^(.*)$""
+              },
+              ""destination"": {
+                ""$id"": ""#/properties/flight/properties/via_flights/items/properties/destination"",
+                ""type"": ""string"",
+                ""title"": ""The Destination Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""TIR""
+                ],
+                ""minLength"": 3,
+                ""maxLength"": 3,
+                ""pattern"": ""^(.*)$""
+              },
+              ""date_depature"": {
+                ""$id"": ""#/properties/flight/properties/via_flights/items/properties/date_depature"",
+                ""type"": ""string"",
+                ""title"": ""The Date_depature Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""2019-07-09""
+                ],
+                ""pattern"": ""^(.*)$"",
+                ""format"": ""date""
+              },
+              ""fare_basic_code"": {
+                ""$id"": ""#/properties/flight/properties/via_flights/items/properties/fare_basic_code"",
+                ""type"": ""object"",
+                ""title"": ""The Fare_basic_code Schema"",
+                ""required"": [
+                  ""adult"",
+                  ""child"",
+                  ""infant""
+                ],
+                ""properties"": {
+                  ""adult"": {
+                    ""$id"": ""#/properties/flight/properties/via_flights/items/properties/fare_basic_code/properties/adult"",
+                    ""type"": ""string"",
+                    ""title"": ""The Adult Schema"",
+                    ""default"": """",
+                    ""examples"": [
+                      ""EOW""
+                    ],
+                    ""minLength"": 1,
+                    ""pattern"": ""^(.*)$""
+                  },
+                  ""child"": {
+                    ""$id"": ""#/properties/flight/properties/via_flights/items/properties/fare_basic_code/properties/child"",
+                    ""type"": ""string"",
+                    ""title"": ""The Child Schema"",
+                    ""default"": """",
+                    ""examples"": [
+                      """"
+                    ],
+                    ""pattern"": ""^(.*)$""
+                  },
+                  ""infant"": {
+                    ""$id"": ""#/properties/flight/properties/via_flights/items/properties/fare_basic_code/properties/infant"",
+                    ""type"": ""string"",
+                    ""title"": ""The Infant Schema"",
+                    ""default"": """",
+                    ""examples"": [
+                      """"
+                    ],
+                    ""pattern"": ""^(.*)$""
+                  }
+                }
+              },
+              ""airline_code"": {
+                ""$id"": ""#/properties/flight/properties/via_flights/items/properties/airline_code"",
+                ""type"": ""string"",
+                ""title"": ""The Airline_code Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""2T""
+                ],
+                ""minLength"": 2,
+                ""pattern"": ""^(.*)$""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+","[
+    {
+        ""key"" : ""user_name"",
+        ""value"" : ""balber"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""password"",
+        ""value"" : ""balbertrujet"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""ChannelCode"",
+        ""value"" : ""BALBER"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    }
+]"

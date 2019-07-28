@@ -1,0 +1,101 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,credential
+1,YATRA,HOTEL,V1,RF,101,RoomDetails,,,,1,Y,CURL,https://stagingapi.yatra.com/corpapi/external/hotel/detail,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""hotel_code"",
+    ""searchId"",
+    ""supplier"",
+    ""no_of_rooms"",
+    ""date""
+  ],
+  ""properties"": {
+    ""hotel_code"": {
+      ""$id"": ""#/properties/hotel_code"",
+      ""type"": ""string"",
+      ""title"": ""The Hotel_code Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""0052293""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""searchId"": {
+      ""$id"": ""#/properties/searchId"",
+      ""type"": ""string"",
+      ""title"": ""The Searchid Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""7 f97ff8b - 07e3 - 497 d - bb82 - a5a84b3e99a2""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""supplier"": {
+      ""$id"": ""#/properties/supplier"",
+      ""type"": ""string"",
+      ""title"": ""The Supplier Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""TGU""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""no_of_rooms"": {
+      ""$id"": ""#/properties/no_of_rooms"",
+      ""type"": ""string"",
+      ""title"": ""The No_of_rooms Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""1""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""date"": {
+      ""$id"": ""#/properties/date"",
+      ""type"": ""object"",
+      ""title"": ""The Date Schema"",
+      ""required"": [
+        ""checkIn"",
+        ""checkOut""
+      ],
+      ""properties"": {
+        ""checkIn"": {
+          ""$id"": ""#/properties/date/properties/checkIn"",
+          ""type"": ""string"",
+          ""title"": ""The Checkin Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""2019-04-19""
+          ],
+          ""pattern"": ""^(.*)$"",
+          ""format"": ""date""
+        },
+        ""checkOut"": {
+          ""$id"": ""#/properties/date/properties/checkOut"",
+          ""type"": ""string"",
+          ""title"": ""The Checkout Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""2019-04-21""
+          ],
+          ""pattern"": ""^(.*)$"",
+          ""format"": ""date""
+        }
+      }
+    }
+  }
+}","[
+	{
+		""key"" : ""APIKey"",
+		""value"" : ""5c8f8f4b55a319ec953daa15"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	}
+]"

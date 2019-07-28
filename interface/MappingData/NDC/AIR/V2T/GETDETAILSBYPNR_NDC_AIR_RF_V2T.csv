@@ -1,0 +1,21 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,CREDENTIALS
+1,NDC,AIR,V2T,RF,102,OrderRetrieve,OrderRetrieve,OrderRetrieveRQ,OrderRetrieveRQ,1,Y,CURL,https://preprodaws.atyourprice.net/AllWebServices2.0/webSearch2.1/data/truJet.php?ep=https://iflyrestest.ibsgen.com:4340/iRes_NdcRes_WS/services/NdcResServiceSOAPPort,"{""$id"": ""http://example.com/root.json"", ""type"": ""object"", ""title"": ""The Root Schema"", ""$schema"": ""http://json-schema.org/draft-07/schema#"", ""required"": [""airlinecode"", ""pnr""], ""properties"": {""pnr"": {""$id"": ""#/properties/pnr"", ""type"": ""string"", ""title"": ""The Pnr Schema"", ""default"": """", ""pattern"": ""^(.*)$"", ""examples"": [""BC22A3""], ""maxLength"": 7, ""minLength"": 6}, ""airlinecode"": {""$id"": ""#/properties/airlinecode"", ""enum"": [""2T""], ""type"": ""string"", ""title"": ""The Airlinecode Schema"", ""default"": """", ""pattern"": ""^(.*)$"", ""examples"": [""2T""]}}, ""definitions"": {}}","[
+    {
+        ""key"" : ""user_name"",
+        ""value"" : ""balber"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""password"",
+        ""value"" : ""balbertrujet"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""ChannelCode"",
+        ""value"" : ""BALBER"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    }
+]"

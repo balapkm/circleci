@@ -1,0 +1,36 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,Credtainals
+1,REDBUS,BUS,V1,RF,101,Destination,,,,1,Y,CURL,http://api.seatseller.travel/destinations,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""sourceId""
+  ],
+  ""properties"": {
+    ""sourceId"": {
+      ""$id"": ""#/properties/sourceId"",
+      ""type"": ""integer"",
+      ""title"": ""The Sourceid Schema"",
+      ""default"": 0,
+      ""examples"": [
+        3
+      ]
+    }
+  }
+}
+","[
+	{
+		""key"" : ""key"",
+		""value"" : ""MCycaVxF6XVV0ImKgqFPBAncx0prPp"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	},
+	{
+		""key"" : ""secret"",
+		""value"" : ""5f0lpy9heMvXNQ069lQPNMomysX6rt"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	}
+]"

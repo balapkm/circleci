@@ -1,0 +1,44 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,REDBUS,BUS,V1,RF,101,Bussearch,,,,1,Y,CURL,http://api.seatseller.travel/availabletrips,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""origin_city_id"",
+    ""dest_city_id"",
+    ""travel_date""
+  ],
+  ""properties"": {
+    ""origin_city_id"": {
+      ""$id"": ""#/properties/origin_city_id"",
+      ""type"": ""integer"",
+      ""title"": ""The Origin_city_id Schema"",
+      ""default"": 0,
+      ""examples"": [
+        3
+      ]
+    },
+    ""dest_city_id"": {
+      ""$id"": ""#/properties/dest_city_id"",
+      ""type"": ""integer"",
+      ""title"": ""The Dest_city_id Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""6""
+      ]
+    },
+    ""travel_date"": {
+      ""$id"": ""#/properties/travel_date"",
+      ""type"": ""string"",
+      ""title"": ""The Travel_date Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""2019-04-23""
+      ],
+      ""pattern"": ""^(.*)$"",
+      ""format"": ""date""
+    }
+  }
+}"

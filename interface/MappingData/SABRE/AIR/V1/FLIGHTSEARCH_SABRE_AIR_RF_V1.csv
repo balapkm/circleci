@@ -1,0 +1,51 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,CREDENTIALS,STATUS
+1,SABRE,AIR,V1,RF,102,BargainFinderMax,BargainFinderMax,BargainFinderMaxRQ,BargainFinderMaxRQ,1,Y,CURL,https://sws-crt.cert.sabre.com,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema""
+}","[
+  {
+    ""key"": ""user_name"",
+    ""value"": ""816472"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  },
+  {
+    ""key"": ""user_authentication"",
+    ""value"": ""WS180918"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  },
+  {
+    ""key"": ""cpaid"",
+    ""value"": ""H0CD"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  },
+  {
+    ""key"": ""domain"",
+    ""value"": ""DEFAULT"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  },
+  {
+    ""key"": ""ipcc"",
+    ""value"": ""3NGI"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  },
+  {
+    ""key"": ""opcc"",
+    ""value"": ""3NGI"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  },
+  {
+    ""key"": ""printer_number"",
+    ""value"": ""FFDA7A"",
+    ""encryption_status"": ""N"",
+    ""status"": ""Y""
+  }
+]",

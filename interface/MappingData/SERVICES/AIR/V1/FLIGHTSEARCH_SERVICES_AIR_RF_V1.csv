@@ -1,0 +1,160 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,,status
+1,SERVICES,AIR,V1,RF,101,FlightSearch,FlightSearch,FlightSearchRQ,FlightSearchRQ,1,Y,CURL,https://preprodaws.atyourprice.net/AllWebServices2.0/webSearch2.1/webServiceSearch.php,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""currency_type"",
+    ""cabinclass"",
+    ""account_type"",
+    ""sector"",
+    ""date"",
+    ""passengers""
+  ],
+  ""properties"": {
+    ""currency_type"": {
+      ""$id"": ""#/properties/currency_type"",
+      ""type"": ""string"",
+      ""enum"": [
+        ""INR""
+      ],
+      ""title"": ""The Currency_type Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""INR""
+      ],
+      ""pattern"": ""^(.*)$""
+    },
+    ""cabinclass"": {
+      ""$id"": ""#/properties/cabinclass"",
+      ""type"": ""string"",
+      ""enum"": [
+        ""E"",
+        ""B"",
+        ""P"",
+        ""F""
+      ],
+      ""title"": ""The Cabinclass Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""E""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""account_type"": {
+      ""$id"": ""#/properties/account_type"",
+      ""type"": ""string"",
+      ""enum"": [
+        ""RF""
+      ],
+      ""title"": ""The account_type Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""RT""
+      ],
+      ""pattern"": ""^(.*)$""
+    },
+    ""sector"": {
+      ""$id"": ""#/properties/sector"",
+      ""type"": ""object"",
+      ""title"": ""The Sector Schema"",
+      ""required"": [
+        ""origin"",
+        ""destination""
+      ],
+      ""properties"": {
+        ""origin"": {
+          ""$id"": ""#/properties/sector/properties/origin"",
+          ""type"": ""string"",
+          ""title"": ""The Origin Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""BOM""
+          ],
+          ""minLength"": 3,
+          ""maxLength"": 3,
+          ""pattern"": ""^(.*)$""
+        },
+        ""destination"": {
+          ""$id"": ""#/properties/sector/properties/destination"",
+          ""type"": ""string"",
+          ""title"": ""The Destination Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""DEL""
+          ],
+          ""minLength"": 3,
+          ""maxLength"": 3,
+          ""pattern"": ""^(.*)$""
+        }
+      }
+    },
+    ""date"": {
+      ""$id"": ""#/properties/date"",
+      ""type"": ""object"",
+      ""title"": ""The Date Schema"",
+      ""required"": [
+        ""onward""
+      ],
+      ""properties"": {
+        ""onward"": {
+          ""$id"": ""#/properties/date/properties/onward"",
+          ""type"": ""string"",
+          ""title"": ""The Onward Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""2019-02-25""
+          ],
+          ""format"": ""date"",
+          ""pattern"": ""^(.*)$""
+        }
+      }
+    },
+    ""passengers"": {
+      ""$id"": ""#/properties/passengers"",
+      ""type"": ""object"",
+      ""title"": ""The Passengers Schema"",
+      ""required"": [
+        ""adult"",
+        ""child"",
+        ""infant""
+      ],
+      ""properties"": {
+        ""adult"": {
+          ""$id"": ""#/properties/passengers/properties/adult"",
+          ""type"": ""integer"",
+          ""title"": ""The Adult Schema"",
+          ""default"": 0,
+          ""examples"": [
+            1
+          ],
+          ""minimum"": 1
+        },
+        ""child"": {
+          ""$id"": ""#/properties/passengers/properties/child"",
+          ""type"": ""integer"",
+          ""title"": ""The Child Schema"",
+          ""default"": 0,
+          ""examples"": [
+            1
+          ]
+        },
+        ""infant"": {
+          ""$id"": ""#/properties/passengers/properties/infant"",
+          ""type"": ""integer"",
+          ""title"": ""The Infant Schema"",
+          ""default"": 0,
+          ""examples"": [
+            0
+          ]
+        }
+      }
+    }
+  }
+}
+",,"{
+  ""request_decryption_status"": ""Y""
+}"

@@ -1,0 +1,21 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,CREDENTIALS
+1,NDC,AIR,V2T,RF,102,AirShopping,AirShopping,AirShoppingRQ,AirShoppingRQ,1,Y,CURL,https://preprodaws.atyourprice.net/AllWebServices2.0/webSearch2.1/data/truJet.php?ep=https://iflyrestest.ibsgen.com:4340/iRes_NdcRes_WS/services/NdcResServiceSOAPPort,"{""$id"": ""http://example.com/root.json"", ""type"": ""object"", ""title"": ""The Root Schema"", ""$schema"": ""http://json-schema.org/draft-07/schema#"", ""required"": [""sector"", ""date"", ""types"", ""passengers""], ""properties"": {""date"": {""$id"": ""#/properties/date"", ""type"": ""object"", ""title"": ""The Date Schema"", ""required"": [""onward""], ""properties"": {""onward"": {""$id"": ""#/properties/date/properties/onward"", ""type"": ""string"", ""title"": ""The Onward Schema"", ""format"": ""date"", ""default"": """", ""pattern"": ""^(.*)$"", ""examples"": [""2019-03-03""]}}}, ""types"": {""$id"": ""#/properties/types"", ""type"": ""object"", ""title"": ""The Types Schema"", ""required"": [""airlinecode""], ""properties"": {""airlinecode"": {""$id"": ""#/properties/types/properties/airlinecode"", ""type"": ""string"", ""title"": ""The Airlinecode Schema"", ""default"": """", ""pattern"": ""^(.*)$"", ""examples"": [""2T""], ""minLength"": 1}}}, ""sector"": {""$id"": ""#/properties/sector"", ""type"": ""object"", ""title"": ""The Sector Schema"", ""required"": [""origin"", ""destination""], ""properties"": {""origin"": {""$id"": ""#/properties/sector/properties/origin"", ""type"": ""string"", ""title"": ""The Origin Schema"", ""default"": """", ""pattern"": ""^(.*)$"", ""examples"": [""HYD""], ""maxLength"": 3, ""minLength"": 3}, ""destination"": {""$id"": ""#/properties/sector/properties/destination"", ""type"": ""string"", ""title"": ""The Destination Schema"", ""default"": """", ""pattern"": ""^(.*)$"", ""examples"": [""MYQ""], ""maxLength"": 3, ""minLength"": 3}}}, ""passengers"": {""$id"": ""#/properties/passengers"", ""type"": ""object"", ""title"": ""The Passengers Schema"", ""required"": [""adult"", ""child"", ""infant""], ""properties"": {""adult"": {""$id"": ""#/properties/passengers/properties/adult"", ""type"": [""string"", ""integer""], ""title"": ""The Adult Schema"", ""default"": 0, ""minimum"": 1, ""examples"": [1]}, ""child"": {""$id"": ""#/properties/passengers/properties/child"", ""type"": [""string"", ""integer""], ""title"": ""The Child Schema"", ""default"": 0, ""examples"": [1]}, ""infant"": {""$id"": ""#/properties/passengers/properties/infant"", ""type"": [""string"", ""integer""], ""title"": ""The Infant Schema"", ""default"": 0, ""examples"": [1]}}}}, ""definitions"": {}}","[
+    {
+        ""key"" : ""user_name"",
+        ""value"" : ""balber"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""password"",
+        ""value"" : ""balbertrujet"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    },
+    {
+        ""key"" : ""ChannelCode"",
+        ""value"" : ""BALBER"",
+        ""encryption_status"" : ""N"",
+        ""status"" : ""Y""
+    }
+]"

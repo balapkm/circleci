@@ -1,0 +1,107 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SAP,IOCL,V1,RF,102,TicketPostingAck,,TicketPostingRQ,TicketPostingRQ,1,Y,CURL,http://sbistagingbe.agencyauto.net/services/serviceWrapper.php,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""MT_SBT_TKT_ACK_OUT""
+  ],
+  ""properties"": {
+    ""MT_SBT_TKT_ACK_OUT"": {
+      ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT"",
+      ""type"": ""object"",
+      ""title"": ""The Mt_sbt_tkt_ack_out Schema"",
+      ""required"": [
+        ""IOCUIDNO"",
+        ""UIDNO"",
+        ""PERNR"",
+        ""VENDORID"",
+        ""DATESTAMP"",
+        ""TIMESTAMP"",
+        ""RETURN_STATUS""
+      ],
+      ""properties"": {
+        ""IOCUIDNO"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/IOCUIDNO"",
+          ""type"": ""string"",
+          ""title"": ""The Iocuidno Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""TKTD-00000000000000002693""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        },
+        ""UIDNO"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/UIDNO"",
+          ""type"": ""string"",
+          ""title"": ""The Uidno Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""21351""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        },
+        ""PERNR"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/PERNR"",
+          ""type"": ""string"",
+          ""title"": ""The Pernr Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""00010965""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        },
+        ""VENDORID"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/VENDORID"",
+          ""type"": ""string"",
+          ""title"": ""The Vendorid Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""BL""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        },
+        ""DATESTAMP"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/DATESTAMP"",
+          ""type"": ""string"",
+          ""title"": ""The Datestamp Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""20190329""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        },
+        ""TIMESTAMP"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/TIMESTAMP"",
+          ""type"": ""string"",
+          ""title"": ""The Timestamp Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""170840""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        },
+        ""RETURN_STATUS"": {
+          ""$id"": ""#/properties/MT_SBT_TKT_ACK_OUT/properties/RETURN_STATUS"",
+          ""type"": ""string"",
+          ""title"": ""The Return_status Schema"",
+          ""default"": """",
+          ""examples"": [
+            ""F""
+          ],
+          ""minLength"": 1,
+          ""pattern"": ""^(.*)$""
+        }
+      }
+    }
+  }
+}
+"

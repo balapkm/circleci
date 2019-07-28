@@ -1,0 +1,62 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,REDBUS,BUS,V1,RF,101,BusCancelPnr,,,,1,Y,CURL,http://api.seatseller.travel/cancelticket,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""PNR"",
+    ""paxInfo""
+  ],
+  ""properties"": {
+    ""PNR"": {
+      ""$id"": ""#/properties/PNR"",
+      ""type"": ""string"",
+      ""title"": ""The Pnr Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""54EX93ST""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""paxInfo"": {
+      ""$id"": ""#/properties/paxInfo"",
+      ""type"": ""array"",
+      ""title"": ""The Paxinfo Schema"",
+      ""items"": {
+        ""$id"": ""#/properties/paxInfo/items"",
+        ""type"": ""object"",
+        ""title"": ""The Items Schema"",
+        ""required"": [
+          ""seatInfo"",
+          ""penalty""
+        ],
+        ""properties"": {
+          ""seatInfo"": {
+            ""$id"": ""#/properties/paxInfo/items/properties/seatInfo"",
+            ""type"": ""object"",
+            ""title"": ""The Seatinfo Schema"",
+            ""required"": [
+              ""seatName""
+            ],
+            ""properties"": {
+              ""seatName"": {
+                ""$id"": ""#/properties/paxInfo/items/properties/seatInfo/properties/seatName"",
+                ""type"": ""string"",
+                ""title"": ""The Seatname Schema"",
+                ""default"": """",
+                ""examples"": [
+                  ""9""
+                ],
+                ""minLength"": 1,
+                ""pattern"": ""^(.*)$""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}"

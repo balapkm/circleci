@@ -1,0 +1,157 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,SAP,IOCL,V1,RF,102,TripDetails,TripDetails,TripDetailsRQ,TripDetailsRQ,1,Y,CURL,123.108.56.123/AllWebServices2.0/IOCL/phpSSLCurl.php?url=https://b2b.ioclebiz.in:6900/RESTAdapter/SBT/TRIPDETAILS&ca_file=/home/Staging/AllWebServices2.0/IOCL/Root.pem&certFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.com.crt&keyFile=/etc/nginx/UAT_SSL/test.service.balmerlawrie-sbt.key&username=b2buser&password=iocl1234,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""employeeNumber"",
+    ""tripNumber"",
+    ""tripType"",
+    ""travelMode"",
+    ""departureDate"",
+    ""arrivalDate"",
+    ""origin"",
+    ""destination"",
+    ""createdBy"",
+    ""tripPurpose"",
+    ""tripStatus"",
+    ""approvalRemarks""
+  ],
+  ""properties"": {
+    ""employeeNumber"": {
+      ""$id"": ""#/properties/employeeNumber"",
+      ""type"": ""string"",
+      ""title"": ""The Employeenumber Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""00029359""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""tripNumber"": {
+      ""$id"": ""#/properties/tripNumber"",
+      ""type"": ""string"",
+      ""title"": ""The Tripnumber Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""4464546""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""tripType"": {
+      ""$id"": ""#/properties/tripType"",
+      ""type"": ""string"",
+      ""title"": ""The Triptype Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""I""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""travelMode"": {
+      ""$id"": ""#/properties/travelMode"",
+      ""type"": ""string"",
+      ""title"": ""The Travelmode Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Air""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""departureDate"": {
+      ""$id"": ""#/properties/departureDate"",
+      ""type"": ""string"",
+      ""title"": ""The Departuredate Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""2019-02-12""
+      ],
+      ""format"": ""date"",
+      ""pattern"": ""^(.*)$""
+    },
+    ""arrivalDate"": {
+      ""$id"": ""#/properties/arrivalDate"",
+      ""type"": ""string"",
+      ""title"": ""The Arrivaldate Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""2019-02-12""
+      ],
+      ""format"": ""date"",
+      ""pattern"": ""^(.*)$""
+    },
+    ""origin"": {
+      ""$id"": ""#/properties/origin"",
+      ""type"": ""string"",
+      ""title"": ""The Origin Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Chennai""
+      ],
+      ""minLength"": 3,
+      ""pattern"": ""^(.*)$""
+    },
+    ""destination"": {
+      ""$id"": ""#/properties/destination"",
+      ""type"": ""string"",
+      ""title"": ""The Destination Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Delhi""
+      ],
+      ""minLength"": 3,
+      ""pattern"": ""^(.*)$""
+    },
+    ""createdBy"": {
+      ""$id"": ""#/properties/createdBy"",
+      ""type"": ""string"",
+      ""title"": ""The Createdby Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""00029359""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""tripPurpose"": {
+      ""$id"": ""#/properties/tripPurpose"",
+      ""type"": ""string"",
+      ""title"": ""The Trippurpose Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""business""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""tripStatus"": {
+      ""$id"": ""#/properties/tripStatus"",
+      ""type"": ""string"",
+      ""title"": ""The Tripstatus Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""A""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""approvalRemarks"": {
+      ""$id"": ""#/properties/approvalRemarks"",
+      ""type"": ""string"",
+      ""title"": ""The Approvalremarks Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Approved. all ok.""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}
+"

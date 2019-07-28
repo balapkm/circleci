@@ -1,0 +1,197 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,credentials
+1,YATRA,HOTEL,V1,RF,101,ReviewCancellation,,,,1,Y,CURL,https://stagingapi.yatra.com/corpapi/external/hotel/reviewCancellation,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""bookingRef"",
+    ""bookingId"",
+    ""reasonForCancellation"",
+    ""itineraries""
+  ],
+  ""properties"": {
+    ""bookingRef"": {
+      ""$id"": ""#/properties/bookingRef"",
+      ""type"": ""string"",
+      ""title"": ""The Bookingref Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""3905281""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""bookingId"": {
+      ""$id"": ""#/properties/bookingId"",
+      ""type"": ""string"",
+      ""title"": ""The Bookingid Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""5cd22828-c91b-44a7-90d5-1645d4b5a71d""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""reasonForCancellation"": {
+      ""$id"": ""#/properties/reasonForCancellation"",
+      ""type"": ""string"",
+      ""title"": ""The Reasonforcancellation Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Testing""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""itineraries"": {
+      ""$id"": ""#/properties/itineraries"",
+      ""type"": ""array"",
+      ""title"": ""The Itineraries Schema"",
+      ""items"": {
+        ""$id"": ""#/properties/itineraries/items"",
+        ""type"": ""object"",
+        ""title"": ""The Items Schema"",
+        ""required"": [
+          ""itineraryId"",
+          ""itineraryDetails""
+        ],
+        ""properties"": {
+          ""itineraryId"": {
+            ""$id"": ""#/properties/itineraries/items/properties/itineraryId"",
+            ""type"": ""string"",
+            ""title"": ""The Itineraryid Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""YTRSI0005341046""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""itineraryDetails"": {
+            ""$id"": ""#/properties/itineraries/items/properties/itineraryDetails"",
+            ""type"": ""array"",
+            ""title"": ""The Itinerarydetails Schema"",
+            ""items"": {
+              ""$id"": ""#/properties/itineraries/items/properties/itineraryDetails/items"",
+              ""type"": ""string"",
+              ""title"": ""The Items Schema"",
+              ""default"": """",
+              ""examples"": [
+                ""2277057""
+              ],
+              ""minLength"": 1,
+              ""pattern"": ""^(.*)$""
+            }
+          }
+        }
+      }
+    }
+  }
+}","[
+	{
+		""key"" : ""APIKey"",
+		""value"" : ""5c8f8f4b55a319ec953daa15"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	}
+]"
+2,YATRA,HOTEL,V1,RF,101,ConfirmCancellation,,,,2,Y,CURL,https://stagingapi.yatra.com/corpapi/external/hotel/confirmCancellation,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""bookingRef"",
+    ""bookingId"",
+    ""reasonForCancellation"",
+    ""itineraries""
+  ],
+  ""properties"": {
+    ""bookingRef"": {
+      ""$id"": ""#/properties/bookingRef"",
+      ""type"": ""string"",
+      ""title"": ""The Bookingref Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""3905281""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""bookingId"": {
+      ""$id"": ""#/properties/bookingId"",
+      ""type"": ""string"",
+      ""title"": ""The Bookingid Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""5cd22828-c91b-44a7-90d5-1645d4b5a71d""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""reasonForCancellation"": {
+      ""$id"": ""#/properties/reasonForCancellation"",
+      ""type"": ""string"",
+      ""title"": ""The Reasonforcancellation Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Testing""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    },
+    ""itineraries"": {
+      ""$id"": ""#/properties/itineraries"",
+      ""type"": ""array"",
+      ""title"": ""The Itineraries Schema"",
+      ""items"": {
+        ""$id"": ""#/properties/itineraries/items"",
+        ""type"": ""object"",
+        ""title"": ""The Items Schema"",
+        ""required"": [
+          ""itineraryId"",
+          ""itineraryDetails""
+        ],
+        ""properties"": {
+          ""itineraryId"": {
+            ""$id"": ""#/properties/itineraries/items/properties/itineraryId"",
+            ""type"": ""string"",
+            ""title"": ""The Itineraryid Schema"",
+            ""default"": """",
+            ""examples"": [
+              ""YTRSI0005341046""
+            ],
+            ""minLength"": 1,
+            ""pattern"": ""^(.*)$""
+          },
+          ""itineraryDetails"": {
+            ""$id"": ""#/properties/itineraries/items/properties/itineraryDetails"",
+            ""type"": ""array"",
+            ""title"": ""The Itinerarydetails Schema"",
+            ""items"": {
+              ""$id"": ""#/properties/itineraries/items/properties/itineraryDetails/items"",
+              ""type"": ""string"",
+              ""title"": ""The Items Schema"",
+              ""default"": """",
+              ""examples"": [
+                ""2277057""
+              ],
+              ""minLength"": 1,
+              ""pattern"": ""^(.*)$""
+            }
+          }
+        }
+      }
+    }
+  }
+}","[
+	{
+		""key"" : ""APIKey"",
+		""value"" : ""5c8f8f4b55a319ec953daa15"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	}
+]"

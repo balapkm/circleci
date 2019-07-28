@@ -1,0 +1,22 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA,Cred
+1,SABRE,COMMON,V1,RF,101,SessionCreate,SessionCreate,SessionCreateRQ,SessionCreateRQ,1,Y,CURL,https://sws-crt.cert.sabre.com,{},"[
+	{
+		""key"" : ""user_name"",
+		""value"" : ""816472"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	},
+	{
+		""key"" : ""password"",
+		""value"" : ""WS180918"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	},
+	{
+		""key"" : ""ipcc"",
+		""value"" : ""3NGI"",
+		""encryption_status"" : ""N"",
+		""status"" : ""Y""
+	}
+]
+"

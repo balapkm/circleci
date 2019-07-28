@@ -1,0 +1,47 @@
+ROW_NO,RESERVATION_NAME,TRAVEL_MODE,VERSION_CODE,ACCOUNT_TYPE,AGENCY_CODE,TEMPLATE_CLASS_NAME,TEMPLATE_NAME,SERVICE_ACTION,SERVICE_METHOD,EXECUTION_ORDER,FILEWRITE,EXECUTION_TYPE,ENDPOINT,VALIDATION_SCHEMA
+1,REDBUS,BUS,v1,RF,101,PrintTicket,,,,1,Y,CURL,http://api.seatseller.travel/ticket,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""pnr""
+  ],
+  ""properties"": {
+    ""pnr"": {
+      ""$id"": ""#/properties/pnr"",
+      ""type"": ""string"",
+      ""title"": ""The Pnr Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Fkv2Izx4Rx""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}"
+1,REDBUS,BUS,V1,RF,101,BusCancellation,,,,2,Y,CURL,http://api.seatseller.travel/cancellationdata,"{
+  ""definitions"": {},
+  ""$schema"": ""http://json-schema.org/draft-07/schema#"",
+  ""$id"": ""http://example.com/root.json"",
+  ""type"": ""object"",
+  ""title"": ""The Root Schema"",
+  ""required"": [
+    ""pnr""
+  ],
+  ""properties"": {
+    ""pnr"": {
+      ""$id"": ""#/properties/pnr"",
+      ""type"": ""string"",
+      ""title"": ""The Pnr Schema"",
+      ""default"": """",
+      ""examples"": [
+        ""Fkv2Izx4Rx""
+      ],
+      ""minLength"": 1,
+      ""pattern"": ""^(.*)$""
+    }
+  }
+}"
